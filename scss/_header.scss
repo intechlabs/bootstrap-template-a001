@@ -1,0 +1,48 @@
+.header {
+    background: $white;
+    border-bottom: 2px solid $gray-200;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    &__nav {
+        letter-spacing: .05rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &__nav-item {
+        &.last-item a {
+            color: $orange!important;
+        }
+    }
+
+    &__nav-link {
+        display: block;
+        padding: 1.5rem 1rem!important;
+        position: relative;
+    }
+
+    @include media-breakpoint-up(md) {
+        &__nav-item {
+            &.last-item {
+                border-left: 1px solid $gray-200;
+            }
+        }
+
+        &__nav-link {
+            &.active {
+                &::after {
+                    background: $orange;
+                    content: "";
+                    display: block;
+                    left: 0;
+                    position: absolute;
+                    bottom: -2px;
+                    height: 3px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

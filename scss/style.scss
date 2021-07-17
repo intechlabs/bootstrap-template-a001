@@ -1,0 +1,63 @@
+$body-color: #343a40;
+
+// input
+$input-btn-focus-width: 0;
+$input-transition:      border-color .1s ease-in-out;
+
+// border
+$border-radius:         0.05rem;
+
+// btns
+$btn-border-radius-sm:  0.05rem;
+$btn-border-radius-md:  0.05rem;
+
+// canvas min-width
+$offcanvas-horizontal-width: 580px;
+
+// override colors
+$orange: #dd5f13;
+$blue: #343a40;
+$light: #dee2e6;
+
+$primary: $blue;
+$secondary: $orange;
+
+// anchor tags
+$link-color: $blue;
+$link-decoration: none;
+$link-hover-color: $orange;
+
+// nav
+$nav-link-color: $blue;
+$nav-link-hover-color: $orange;
+$nav-link-transition: none;
+
+// navbar
+$navbar-padding-y: 0;
+$navbar-light-color: $blue;
+$navbar-light-toggler-border-color: none;
+$navbar-light-hover-color: $orange;
+$navbar-light-active-color: $orange;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1180px
+) !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  background: rgb(255,254,254);
+  background: linear-gradient(153deg, rgba(255,254,254,1) 39%, rgba(222,226,230,1) 100%);
+}
+
+@import './header';
+
+@import './footer';
+
+@import './pages/index';
+
+@import './components/index';

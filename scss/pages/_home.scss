@@ -1,0 +1,92 @@
+// homepage
+.homepage {
+
+    // hero
+    .hero {
+        padding: 3rem 0;
+        position: relative;
+        background: url('../images/homepage_hero_pattern.jpg');
+
+        &__content {
+            padding: 3rem 0;
+            text-transform: uppercase;
+        }
+
+        &__lead {
+            font-weight: 500;
+            color: $gray-800;
+        }
+
+        &__image {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 55vw;
+
+            background: url('../images/homepage_bg.jpg');
+            background-position: top;
+            background-size: cover;
+            clip-path: polygon(15% 0,100% 0,100% 100%,0 100%);
+
+            &::after {
+                bottom: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                background: linear-gradient(180deg,rgb(253 95 0/32%),rgba(0,0,0,0.15));
+                content: "";
+                height: 100%;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            & {
+                height: 50vw;
+                max-height: 75vh;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            &__lead {
+                font-size: 3rem;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+#our-radio-show {
+    background: url('../images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg');
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;
+}
+
+#our-clients {
+    img {
+        max-width: 100%;
+        width: 6rem;
+
+        @include media-breakpoint-up(lg) {
+            & {
+                width: 8rem;
+            }
+        }
+    }
+}
+
+#meetup-our-hosts {
+    .hover-icon {
+
+        top: -40px;
+
+        img {
+            max-width: 44px;
+            margin: 2rem;
+        }
+    }
+}

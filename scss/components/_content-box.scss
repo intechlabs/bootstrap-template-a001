@@ -1,0 +1,54 @@
+.content-box {
+
+    &__lead {
+        text-transform: uppercase;
+        color: $gray-800;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::after {
+            width: 3rem;
+            border-radius: 10px;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -15px;
+            height: 5px;
+            background-color: $orange;
+        }
+    }
+
+    &__content {
+        line-height: 2.2rem;
+        font-size: $h5-font-size;
+    }
+    
+    @include media-breakpoint-up(md) {
+        &.content-center &__lead,
+        &.content-center &__content {
+            text-align: center;
+        }
+
+        &.content-left &__lead,
+        &.content-left &__content {
+            text-align: left;
+        }
+
+        &.content-center &__lead::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &.content-left &__lead::after {
+            left: 0;
+            transform: none;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__content {
+            font-size: $h4-font-size;
+        }
+    }
+}

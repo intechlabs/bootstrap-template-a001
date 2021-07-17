@@ -1,0 +1,24 @@
+{
+  "name": "intechlabs_web_solutions_a001",
+  "version": "1.0.0",
+  "description": "INTECH WEB SOLUTIONS | DESIGN - A001 |",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss:assets/css",
+    "sass:watch": "sass --watch scss:assets/css",
+    "build": "yarn run sass && postcss assets/css/style.css --dir assets/css"
+  },
+  "author": "Sumit Wadhwa <keaton.sumit@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.6",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.35.1"
+  }
+}
