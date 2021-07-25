@@ -1,5 +1,5 @@
 # IntechLabs Web Solutions
-### Free Bootstrap 5 Template
+### Free Bootstrap 5 Landing Page
 ###
 ###
 
